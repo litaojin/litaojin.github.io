@@ -1,54 +1,68 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Bootstrap</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>WIFI-ROBOT</title>
 </head>
 <body>
-<div class="container">
-    <h1>你好,欢迎来到我的WIFI小车!</h1><small>基于Arduino的WIFI视频小车</small>
+<body style="background-image:url(star.png);background-attachment:fixed">
+<ul style="font-size:30pt;">
+
+<h1>Welcome to WIFI-Robot</h1>
+<p><h5>作者：李佳峻</h5>
+<canvas id="mc" width="420" height="280"
+        style="border:1px solid black"></canvas>
 
 
-    <div class="row">
-        <div class="col-xs-2">
-            <h2 class="page-header">小车</h2>
-            <p>小车作者：李佳峻</p>
-        </div>
-        <div class="col-xs-6">
-            <h2 class="page-header">区域二</h2>
-            <p>If you work with Bootstrap's uncompiled source code, you need to compile the LESS files to produce usable CSS files. For compiling LESS files into CSS, we only officially support Recess, which is Twitter's CSS hinter based on less.js.</p>
-        </div>
-        <div class="col-xs-4">
-            <h2 class="page-header">区域三</h2>
-            <p>Within the download you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
-        </div>
+<script type="text/javascript">
+    // 获取canvas元素对应的DOM对象
+    var canvas = document.getElementById('mc');
+    // 获取在canvas上绘图的CanvasRenderingContext2D对象
+    var ctx = canvas.getContext('2d');
+    // 创建Image对象
+    var image = new Image();
+    // 指定Image对象装载图片
+    image.src = "logo.png";
+    // 当图片装载完成时激发该函数
+    image.onload = function()
+    {
+        ctx.drawImage(image , 20 , 50);
 
+    }
+</script>
+<script type="text/javascript">
+    // 获取canvas元素对应的DOM对象
+    var canvas = document.getElementById('mc');
+    // 获取在canvas上绘图的CanvasRenderingContext2D对象
+    var ctx = canvas.getContext('2d');
+    // 设置阴影的模糊度
+    ctx.shadowBlur = 10;
+    // 设置阴影颜色
+    ctx.shadowColor = "#222";
+    // 设置阴影在X、Y方法上的偏移
+    ctx.shadowOffsetX = 10;
+    ctx.shadowOffsetY = -6;
+    ctx.fillStyle = '#00f';
+    ctx.font = 'italic 40px AR BERKLEY';
+    ctx.textBaseline = 'top';
+    // 填充字符串
+    ctx.fillText('WIFI-Robot', 40, 0);
+</script>
+<hr />
+<div class="row">
+    <div class="col-xs-2">
+        <h2 class="page-header">WIFI-Robot简介</h2>
+        <p><h5>这是一款基于arduino的WiFi视频传输小车</h5>
+        <p>4个TT马达</p>
+        <p>1个路由模块</p>
+        <p>2自由度云台</p>
+        <p>1个高清摄像头</p>
+        <p>1个无源蜂鸣器</p>
+        <p>2个LED发光模块</p>
+        <p>1个超声波传感器</p>
+        <p>1个红外测距传感器</p>
+        <p>1个光强度检测传感器</p>
+        <p><strong>很高科技吧！！！O(∩_∩)O哈哈哈~</strong>
     </div>
-</div>
-<div class="dropdown">
-    <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-        菜单
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-        <li role="presentation" class="divider"></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-    </ul>
-</div>
-<script src="js/jquery-2.0.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
-</html>
+</html>>
