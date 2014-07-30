@@ -10,59 +10,22 @@
 
 <h1>Welcome to WIFI-Robot</h1>
 <p><h5>作者：李佳峻</h5>
-<canvas id="mc" width="420" height="280"
-        style="border:1px solid black"></canvas>
-
-
-<script type="text/javascript">
-    // 获取canvas元素对应的DOM对象
-    var canvas = document.getElementById('mc');
-    // 获取在canvas上绘图的CanvasRenderingContext2D对象
-    var ctx = canvas.getContext('2d');
-    // 创建Image对象
-    var image = new Image();
-    // 指定Image对象装载图片
-    image.src = "pic/logo.png";
-    // 当图片装载完成时激发该函数
-    image.onload = function()
-    {
-        ctx.drawImage(image , 20 , 50);
-
-    }
-</script>
-<script type="text/javascript">
-    // 获取canvas元素对应的DOM对象
-    var canvas = document.getElementById('mc');
-    // 获取在canvas上绘图的CanvasRenderingContext2D对象
-    var ctx = canvas.getContext('2d');
-    // 设置阴影的模糊度
-    ctx.shadowBlur = 10;
-    // 设置阴影颜色
-    ctx.shadowColor = "#222";
-    // 设置阴影在X、Y方法上的偏移
-    ctx.shadowOffsetX = 10;
-    ctx.shadowOffsetY = -6;
-    ctx.fillStyle = '#00f';
-    ctx.font = 'italic 40px AR BERKLEY';
-    ctx.textBaseline = 'top';
-    // 填充字符串
-    ctx.fillText('WIFI-Robot', 40, 0);
-</script>
+<span><h2><i>WIFI-Robot</i></h2></span>
+    <img src = "pic/logo.png" alt="logo" />
 <hr />
 <div class="row">
     <div class="col-xs-2">
         <h2 class="page-header">WIFI-Robot简介</h2>
         <p><h5>这是一款基于arduino的WiFi视频传输小车</h5>
-        <p>4个TT马达</p>
-        <p>1个路由模块</p>
-        <p>2自由度云台</p>
-        <p>1个高清摄像头</p>
-        <p>1个无源蜂鸣器</p>
-        <p>2个LED发光模块</p>
-        <p>1个超声波传感器</p>
-        <p>1个红外测距传感器</p>
-        <p>1个光强度检测传感器</p>
-        <p><strong>很高科技吧！！！O(∩_∩)O哈哈哈~</strong>
-    </div>
+       <ul></ul> <li><p>4个TT马达</p></li>
+        <li><p>1个路由模块</p></li>
+        <li><p>2自由度云台</p></li>
+        <li> <p>1个高清摄像头</p></li>
+        <li>  <p>1个无源蜂鸣器</p></li>
+        <li> <p>2个LED发光模块</p></li>
+        <li><p>1个超声波传感器</p></li>
+        <li><p>1个红外测距传感器</p></li>
+        <li> <p>1个光强度检测传感器</p></li></ul>
+        <p><h2>很高科技吧！！！O(∩_∩)O哈哈哈~</h2></p>
 </body>
 </html>
