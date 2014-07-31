@@ -10,12 +10,36 @@
 
     <h1>Welcome to WIFI-Robot</h1>
     <p><h5>作者：李佳峻</h5>
-    <span><h2><i>WIFI-Robot</i></h2></span>
+    <span><h2><i><mark>WIFI-Robot</mark></i></h2></span>
     <img src = "pic/logo.png" alt="logo" />
     <hr />
     <p><h2>WIFI-Robot简介</h2></p>
-    <p><h5>这是一款基于arduino的WiFi视频传输小车</h5>
-
+    <p><h4>这是一款基于arduino的WiFi视频传输小车</h4>
+    <table style="width:700px" border="1">
+        <caption><b>小车参数</b></caption>
+        <tr>
+            <th>名称</th>
+            <th>参数</th>
+        </tr>
+     <tr>
+        <td>小车速度：</td><td><meter value="80" max="100"></meter><td />
+    </tr>
+        <tr>
+            <td>  摄像头高清度：</td><td> <meter value="95" max="100"></meter><td />
+        </tr>
+        <tr>
+            <td> 超声波测距精度：</td><td> <meter value="80" max="100"></meter><td />
+        </tr>
+        <tr>
+            <td>  超声波测距距离：</td><td>  <meter value="95" max="100"></meter><td />
+        </tr>
+        <tr>
+            <td>  红外测距精度：</td><td> <meter value="70" max="100"></meter><td />
+        </tr>
+        <tr>
+            <td>  红外测距距离：</td><td>  <meter value="17" max="100"></meter><td />
+        </tr>
+    <br /></table>
     <table style="width:500px" border="1">
         <caption><b>零件清单</b></caption>
         <tr>
@@ -60,8 +84,8 @@
         </tr>
     </table>
     <p><h3>很高科技吧！</h3></p>
-    <p>请您给此网站打分：</p>
-    <div id="score" hidden="true" style="heighe:100px">
+    <h3>请您给此网站打分：</h3>
+    <div id="score" hidden="true" style="height:50px">
         感谢您的打分。</div>
     <button onclick="var score=document.getElementById('score');
     score.hidden=false;">1分</button>
@@ -72,15 +96,16 @@
     <button onclick="var score=document.getElementById('score');
     score.hidden=false;">4分</button>
     <button onclick="var score=document.getElementById('score');
-    score.hidden=false;">5分</button>
+    score.hidden=false;">5分</button><br />
+    平均分：<meter value="4.9" max="5"></meter>
     <hr />
     <table style="width:500px" border="1">
         <caption><b></b></caption>
         <tr>
-            <th>警告</th>
+            <th><mark>警告</mark></th>
         </tr>
         <tr>
-            <td>闲人请勿继续往下看！！！</td>
+            <td><mark>闲人请勿继续往下看！！！</mark></td>
         </tr>
         <br /><a href="#">点击返回</a>
     </table>
@@ -94,10 +119,9 @@
     <button onclick="var open=document.getElementById('open');
     open.hidden=!open.hidden;">密码</button>
     <div id="open" hidden="true" style="heighe:100px">
-        密码：<textarea></textarea><aside><div id="password" hidden="true" style="heighe:100px"><a href="http://www.baidu.com"><h6>百度搜索</h6></a>
+        <label>密码：<input id="lock" name="lock" type="lock" /></label><br /><div id="password" hidden="true" style="heighe:100px"><a href="http://www.baidu.com"><h6>百度搜索</h6></a>
         <a href="http://www.google.cn"><h6>谷歌搜索</h6></a><a href="http://www.sogou.com"><h6>搜狗搜索</h6></a><a href="http://hao.360.cn/tiyan.html"><h6>360搜索</h6></a><a href="http://wap.soso.com/"><h6>腾讯搜索</h6></a></div><button onclick="var password=document.getElementById('password');
     password.hidden=!password.hidden;">忘记密码？</button>
-    </aside>
     </div>
 </ul>
 </body>
