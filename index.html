@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <form action="" method="get">
     <title>WIFI-ROBOT</title>
     <style type="text/css">
         body {font-size: 12pt;}
@@ -125,19 +126,12 @@
     </table>
     <p><h3>很高科技吧！</h3></p>
     <hr />
-    <h3>请您给此网站打分：</h3>
-    <div id="score" hidden="true" style="height:50px">
-        感谢您的打分。</div>
-    <button onclick="var score=document.getElementById('score');
-    score.hidden=false;">1分</button>
-    <button onclick="var score=document.getElementById('score');
-    score.hidden=false;">2分</button>
-    <button onclick="var score=document.getElementById('score');
-    score.hidden=false;">3分</button>
-    <button onclick="var score=document.getElementById('score');
-    score.hidden=false;">4分</button>
-    <button onclick="var score=document.getElementById('score');
-    score.hidden=false;">5分</button><br />
+    <h3>请您给此网站打分：</h3><br/>
+    1分<input id="gender1" name="gender1" type="radio" value="1分" />
+    2分<input id="gender2" name="gender2" type="radio" value="2分" />
+    3分<input id="gender3" name="gender3" type="radio" value="3分" />
+    4分<input id="gender4" name="gender4" type="radio" value="4分" />
+    5分<input id="gender5" name="gender5" type="radio" value="5分" /><br />
     平均分：<meter value="4.9" max="5"></meter>
     <hr />
     <table style="width:500px" border="1">
@@ -157,15 +151,9 @@
     <img src = "pic/jinggao.jpg" alt="jinggao" />
     <img src = "pic/jinggao.jpg" alt="jinggao" />
     <hr />
-    <button onclick="var open=document.getElementById('open');
-    open.hidden=!open.hidden;">密码</button>
-    <div id="open" hidden="true" style="heighe:100px">
-        密码：<input id="password" name="password" type="password" /><br /><div id="forgetpassword" hidden="true" style="heighe:100px"><a href="http://www.baidu.com"><h6>百度搜索</h6></a>
-        <a href="http://www.google.cn"><h6>谷歌搜索</h6></a><a href="http://www.sogou.com"><h6>搜狗搜索</h6></a><a href="http://hao.360.cn/tiyan.html"><h6>360搜索</h6></a><a href="http://wap.soso.com/"><h6>腾讯搜索</h6></a></div>
-        <input id="ok" name="ok" type="submit" value="确定" />
-        <input id="cancel" name="cancel" type="reset" value="重填"/>
-        <button onclick="var forgetpassword=document.getElementById('forgetpassword');forgetpassword.hidden=!forgetpassword.hidden;">忘记密码？</button>
-    </div>
+    密码：<input id="password" name="password" type="password" />
+    <input id="ok" name="ok" type="submit" value="确定" />
+    <input id="cancel" name="cancel" type="reset" value="重填"/>
 </ul>
 </body>
 </body>
