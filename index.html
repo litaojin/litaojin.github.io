@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <form method="post">
+    <form  action="http://litaojin.github.io/li.html"method="get">
     <title>WIFI-ROBOT</title>
     <style type="text/css">
         body {font-size: 12pt;}
@@ -178,20 +178,36 @@
     <img src = "pic/jinggao.jpg" alt="jinggao" />
     <img src = "pic/jinggao.jpg" alt="jinggao" />
     <hr />
-    <article>账号：<input type="text" name="name" list="email" />
-    <datalist id="email">
+    <form action="add">
+    账号：<input id="writeemail" name="name" type="text" list="email" placeholder="请输入账号" required pattern="li.jiajun0322@gmail.com|litaojin@gmail.com" />
+        <datalist id="email">
     <option value="li.jiajun0322@gmail.com">li.jiajun0322@gmail.com</option>
     <option value="litaojin@gmail.com">litaojin0322@gmail.com</option>
     </datalist>
     <h5>（双击可以显示注册过的账号，点击可以快速输入。）</h5>
-    密码：<input id="password" name="password" type="password" />
+    密码：<input id="password" name="password" type="password" placeholder="请填写密码" required pattern="62011505"/>
     <br />登陆方式：
     <select id="skills" name="skills">
     <option value="email" >email</option>
     <option value="qq" >qq</option>
-    <option value="github" >github</option>
+    <option value="github" >github</option></form>
+        <script type="text/javascript">
+            var check = function()
+            {
+                if(!document.getElementById("password").checkValidity())
+                {
+                    document.getElementById("password").setCustomValidity("密码不正确！！！");
+                }
+                if(!document.getElementById("writeemail").checkValidity())
+                {
+                    document.getElementById("writeemail").setCustomValidity("此账号未注册！！！");
+                }
+
+            };
+        </script>
     </select>
-    <aside><input type="button" value="确定" onclick="window.open('http://litaojin.github.io/li.html')"><button  type="reset" value="重填">重填</button></aside></article>
+
+    <input type="submit" value="确定" onclick="check()"><button  type="reset" value="重填">重填</button>
     </form>
 </ul>
 </body>
