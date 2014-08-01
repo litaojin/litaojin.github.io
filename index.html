@@ -160,9 +160,11 @@
     <button onclick="var open=document.getElementById('open');
     open.hidden=!open.hidden;">密码</button>
     <div id="open" hidden="true" style="heighe:100px">
-        <label>密码：<input id="lock" name="lock" type="lock" /></label><br /><div id="password" hidden="true" style="heighe:100px"><a href="http://www.baidu.com"><h6>百度搜索</h6></a>
-        <a href="http://www.google.cn"><h6>谷歌搜索</h6></a><a href="http://www.sogou.com"><h6>搜狗搜索</h6></a><a href="http://hao.360.cn/tiyan.html"><h6>360搜索</h6></a><a href="http://wap.soso.com/"><h6>腾讯搜索</h6></a></div><button onclick="var password=document.getElementById('password');
-    password.hidden=!password.hidden;">忘记密码？</button>
+        密码：<input id="password" name="password" type="password" /><br /><div id="forgetpassword" hidden="true" style="heighe:100px"><a href="http://www.baidu.com"><h6>百度搜索</h6></a>
+        <a href="http://www.google.cn"><h6>谷歌搜索</h6></a><a href="http://www.sogou.com"><h6>搜狗搜索</h6></a><a href="http://hao.360.cn/tiyan.html"><h6>360搜索</h6></a><a href="http://wap.soso.com/"><h6>腾讯搜索</h6></a></div>
+        <input id="ok" name="ok" type="submit" value="确定" />
+        <input id="cancel" name="cancel" type="reset" value="重填"/>
+        <button onclick="var forgetpassword=document.getElementById('forgetpassword');forgetpassword.hidden=!forgetpassword.hidden;">忘记密码？</button>
     </div>
 </ul>
 </body>
