@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <form action="" method="get">
+    <form method="post">
     <title>WIFI-ROBOT</title>
     <style type="text/css">
         body {font-size: 12pt;}
@@ -151,14 +151,20 @@
     <img src = "pic/jinggao.jpg" alt="jinggao" />
     <img src = "pic/jinggao.jpg" alt="jinggao" />
     <hr />
+    账号：<input type="text" name="name" list="email" />
+    <datalist id="email">
+    <option value="li.jiajun0322@gmail.com">li.jiajun0322@gmail.com</option>
+    <option value="litaojin@gmail.com">litaojin0322@gmail.com</option>
+    </datalist>
     密码：<input id="password" name="password" type="password" />
-    登陆方式：<select id="skills" name="skills">
+    登陆方式：
+    <select id="skills" name="skills">
     <option value="email" >email</option>
     <option value="qq" >qq</option>
     <option value="github" >github</option>
     </select>
-    <button type="submit" ><b>确定</b></button>
-    <button  type="reset" ><b>重填</b></button>
+    <button type="submit" value="确定" formaction="li.html">确定</button>
+    <button  type="reset" value="重填">重填</button>
     </form>
 </ul>
 </body>
