@@ -51,8 +51,19 @@
         </tr>
     </table>
     <p></p>
-    <table style="width:300px" border="1"><td><video src="pic/servo.mp4" controls autoplay>您的浏览器不支持播放视频。</video></td></table>
-    <hr />
+    <table style="width:300px" border="1"><td><video src="pic/servo.mp4" controls autoplay id="video">您的浏览器不支持播放视频。</video><meter value="0" max="1" id="meter"></meter></td></table>
+    <script type="text/javascript">
+        var mv = document.getElementById("video");
+        var detail = document.getElementById("meter");
+        // 为video元素的ontimeupdate事件绑定监听器
+        mv.ontimeupdate = function()
+        {
+            meter.value = mv.currentTime;
+            meter.max= + mv.duration;
+        };
+    </script>
+
+        <hr />
     <p><h2>WIFI-Robot简介</h2></p>
     <p><h4>这是一款基于arduino的WiFi视频传输小车</h4>
 
@@ -156,6 +167,7 @@
     <option value="li.jiajun0322@gmail.com">li.jiajun0322@gmail.com</option>
     <option value="litaojin@gmail.com">litaojin0322@gmail.com</option>
     </datalist>
+    <h5>（双击可以显示注册过的账号，点击可以快速输入。）</h5>
     密码：<input id="password" name="password" type="password" />
     登陆方式：
     <select id="skills" name="skills">
