@@ -185,7 +185,7 @@
     <option value="litaojin@gmail.com">litaojin0322@gmail.com</option>
     </datalist>
     <h5>（双击可以显示注册过的账号，点击可以快速输入。）</h5>
-    密码：<input id="password" name="password" type="password" placeholder="请填写密码" required pattern="62011505"/>
+    密码：<input id="password" name="password" type="password" placeholder="请填写密码" />
     <br />登陆方式：
     <select id="skills" name="skills">
     <option value="email" >email</option>
@@ -194,16 +194,23 @@
         <script type="text/javascript">
             var check = function()
             {
-                if(!document.getElementById("password").checkValidity())
-                {
-                    document.getElementById("password").setCustomValidity("密码不正确！！！");
-                }
                 if(!document.getElementById("writeemail").checkValidity())
                 {
                     document.getElementById("writeemail").setCustomValidity("此账号未注册！！！");
                 }
                 if(skills.value=="qq"){
-                    document.getElementById("skills").setCustomValidity("没有此qq号");
+                    document.getElementById("writeemail").setCustomValidity("没有此qq号！！！");
+                }
+                if(writeemail.value=="li.jiajun0322@gmail.com"){
+                    if(password.value!="t1i2a3n4")
+                        document.getElementById("password").setCustomValidity("账号密码不匹配！！！");
+                    if(skills.value=="github"){
+                        document.getElementById("writeemail").setCustomValidity("没有此github账号！！！");
+                    }
+                }
+                if(writeemail.value=="litaojin@gmail.com"){
+                    if(password.value!="62011505")
+                        document.getElementById("password").setCustomValidity("账号密码不匹配！！！");
                 }
 
 
