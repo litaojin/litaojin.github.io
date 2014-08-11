@@ -163,7 +163,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 col-sm-12">
+        <div class="col-xs-12 col-sm-6">
             <form action="http://litaojin.github.io/li.html"method="get">
             <form action="add">
                 账号：<input id="writeemail" name="name" type="text" list="email" placeholder="请输入账号" required pattern="li.jiajun0322@gmail.com|litaojin@gmail.com" />
@@ -171,42 +171,41 @@
                     <option value="li.jiajun0322@gmail.com">li.jiajun0322@gmail.com</option>
                     <option value="litaojin@gmail.com">litaojin0322@gmail.com</option>
                 </datalist>
-                <h5>（双击可以显示注册过的账号，点击可以快速输入。）</h5>
+                （双击可以显示注册过的账号，点击可以快速输入）
+        </div>
+        <div class="col-xs-12 col-sm-3">
                 密码：<input id="password" name="password" type="password" placeholder="请填写密码" />
-                <br />登陆方式：
-                <select id="skills" name="skills">
-                    <option value="email" >email</option>
-                    <option value="qq" >qq</option>
-                    <option value="github" >github</option></form>
-            <script type="text/javascript">
-                var check = function()
-                {
-                    if(!document.getElementById("writeemail").checkValidity())
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            登陆方式：
+            <select id="skills" name="skills">
+                <option value="email" >email</option>
+                <option value="qq" >qq</option>
+                <option value="github" >github</option></form>
+                <script type="text/javascript">
+                    var check = function()
                     {
-                        document.getElementById("writeemail").setCustomValidity("此账号未注册！！！");
-                    }
-                    if(skills.value=="qq"){
-                        document.getElementById("writeemail").setCustomValidity("没有此qq号！！！");
-                    }
-                    if(writeemail.value=="li.jiajun0322@gmail.com"){
-                        if(password.value!="t1i2a3n4")
-                            document.getElementById("password").setCustomValidity("账号密码不匹配！！！");
-                        if(skills.value=="github"){
-                            document.getElementById("writeemail").setCustomValidity("没有此github账号！！！");
+                        if(!document.getElementById("writeemail").checkValidity())
+                        {
+                            document.getElementById("writeemail").setCustomValidity("此账号未注册！！！");
                         }
-                    }
-                    if(writeemail.value=="litaojin@gmail.com"){
-                        if(password.value!="62011505")
-                            document.getElementById("password").setCustomValidity("账号密码不匹配！！！");
-                    }
-
-
-
-                };
-
-            </script>
+                        if(skills.value=="qq"){
+                            document.getElementById("writeemail").setCustomValidity("没有此qq号！！！");
+                        }
+                        if(writeemail.value=="li.jiajun0322@gmail.com"){
+                            if(password.value!="t1i2a3n4")
+                                document.getElementById("password").setCustomValidity("账号密码不匹配！！！");
+                            if(skills.value=="github"){
+                                document.getElementById("writeemail").setCustomValidity("没有此github账号！！！");
+                            }
+                        }
+                        if(writeemail.value=="litaojin@gmail.com"){
+                            if(password.value!="62011505")
+                                document.getElementById("password").setCustomValidity("账号密码不匹配！！！");
+                        }
+                    };
+                </script>
             </select>
-
             <input type="submit" value="确定" onclick="check()"><button  type="reset" value="重填">重填</button>
             </form>
         </div>
