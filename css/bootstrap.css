@@ -12,8 +12,13 @@ html {
 }
 body {
   margin: 0;
-    font-family: "楷体";
-    background-color: #245269;
+    font-family: "方正舒体";
+    background-color: #000000;
+    font-size:20pt;
+    color:white;
+}
+#mark {
+    color:black;
 }
 article,
 aside,
