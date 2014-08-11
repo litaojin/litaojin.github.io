@@ -13,12 +13,32 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
+    <style type="text/css">
+        body {
+            font-family: "方正舒体";
+            font-size:20pt;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        mark{
+            background: #ffff00;
+            color:black;
+        }
+        #mark{
+            background: #ffff00;
+            color:black;
+            font-family: "AR BERKLEY";
+        }
+
+
+
+    </style>
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <h1 id="center">Welcome to WIFI-Robot <small>作者：李佳峻</small></h1>
+            <h1 id="center">Welcome to WIFI-Robot <h3>作者：李佳峻</h3></h1>
             <em><mark id="mark">WIFI-Robot</mark></em>
         </div>
     </div>
@@ -46,7 +66,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <h3>WIFI-Robot <small>这是一款基于<em>Arduino</em>的<em>WiFi</em>视频传输小车</small></h3>
+            <h3>WIFI-Robot <h5>这是一款基于<em>Arduino</em>的<em>WiFi</em>视频传输小车</h5></h3>
         </div>
     </div>
     <div class="row">
@@ -144,7 +164,7 @@
             <h3>很高科技吧！</h3><hr>
         </div>
         <div class="col-xs-12 col-sm-2">
-            请您给此网站打分：
+            <h4>请您给此网站打分：</h4>
         </div>
         <div class="col-xs-12 col-sm-4">
             1分<input id="gender" name="gender" type="radio" value="1分" />
@@ -164,18 +184,23 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <img src = "pic/jinggao.jpg" alt="jinggao" height="30"/><B><mark>警告！闲人请勿继续往下看！！！</mark></B><hr>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-xs-12 col-sm-6">
             <form action="http://litaojin.github.io/li.html"method="get">
-            <form action="add">
-                账号：<input id="writeemail" name="name" type="text" list="email" placeholder="请输入账号" required pattern="li.jiajun0322@gmail.com|litaojin@gmail.com" />
-                <datalist id="email">
-                    <option value="li.jiajun0322@gmail.com">li.jiajun0322@gmail.com</option>
-                    <option value="litaojin@gmail.com">litaojin0322@gmail.com</option>
-                </datalist>
-                （双击可以显示注册过的账号，点击可以快速输入）
+                <form action="add">
+                    账号：<input id="writeemail" name="name" type="text" list="email" placeholder="请输入账号" required pattern="li.jiajun0322@gmail.com|litaojin@gmail.com" />
+                    <datalist id="email">
+                        <option value="li.jiajun0322@gmail.com">li.jiajun0322@gmail.com</option>
+                        <option value="litaojin@gmail.com">litaojin0322@gmail.com</option>
+                    </datalist>
+                    （双击可以显示注册过的账号，点击可以快速输入）
         </div>
         <div class="col-xs-12 col-sm-3">
-                密码：<input id="password" name="password" type="password" placeholder="请填写密码" />
+            密码：<input id="password" name="password" type="password" placeholder="请填写密码" />
         </div>
         <div class="col-xs-12 col-sm-3">
             登陆方式：
