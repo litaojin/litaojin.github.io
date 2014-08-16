@@ -14,25 +14,40 @@
     <![endif]-->
 </head>
 <body>
-<video src="pic/servo.mp4" controls autoplay id="video" style="width: 50%">您的浏览器不支持播放视频。</video>
-<div id="meter" class="progress progress-striped active">
-    <div  class="progress-bar" ></div>
-</div>
-<script type="text/javascript">
-    var mv = document.getElementById("video");
-    var detail = document.getElementById("meter");
-    // 为video元素的ontimeupdate事件绑定监听器
-    mv.ontimeupdate = function()
-    {
-        meter.value = mv.currentTime;
-
-    };
-</script>
 <div class="progress progress-striped active">
     <div class="progress-bar" style="width:10%"></div>
 </div>
 <div class="progress progress-striped progress-bar-info active">
     <div class="progress-bar" style="width:10%"></div>
+</div>
+<div class="progress progress-striped progress-bar-warning active">
+    <div class="progress-bar" style="width:10%"></div>
+</div>
+<div class="progress progress-striped progress-bar-danger active">
+    <div class="progress-bar" style="width:10%"></div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">#</div>
+        <div class="col-md-2">#</div>
+        <div class="col-md-1">#</div>
+        <div class="col-md-6"></div>
+        <div class="col-md-1">#</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">#</div>
+        <div class="col-md-9">#</div>
+        <div class="col-md-1">#</div>
+        <div class="col-md-6">#</div>
+        <div class="col-md-6">#</div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">#</div>
+        <div class="col-md-5">#</div>
+        <div class="col-md-2">#</div>
+        <div class="col-md-5">#</div>
+        <div class="col-md-7">#</div>
+    </div>
 </div>
 </body>
 </html>
