@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Bootstrap</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<video src="pic/servo.mp4" controls autoplay id="video" style="width: 50%">您的浏览器不支持播放视频。</video>
+<div class="progress progress-striped active">
+    <div id="meter" class="progress-bar" ></div>
+</div>
+<script type="text/javascript">
+    var mv = document.getElementById("video");
+    var detail = document.getElementById("meter");
+    // 为video元素的ontimeupdate事件绑定监听器
+    mv.ontimeupdate = function()
+    {
+        meter.style = "width"+mv.currentTime;
+
+    };
+</script>
+<div class="progress progress-striped active">
+    <div class="progress-bar" style="width:10%"></div>
+</div>
+<div class="progress progress-striped progress-bar-info active">
+    <div class="progress-bar" style="width:10%"></div>
+</div>
+</body>
+</html>
