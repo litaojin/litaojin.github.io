@@ -19,14 +19,22 @@
             font-size:20px;
             color:#000000;
         }
+        B{
+            color:black;
+            font-size:30px;
+        }
         mark{
             background: #ffff00;
             color:black;
-        }
-        #mark{
-            background: #ffff00;
-            color:black;
             font-family: "AR BERKLEY";
+            font-size:30px;
+        }
+        h1:after{
+           content:url("pic/logo.png");
+        }
+        h1:first-letter{
+            font-family: "AR DELANEY";
+            font-size:50px;
         }
     </style>
 </head>
@@ -37,18 +45,8 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-9">
-            <h1 id="center">Welcome to WIFI-Robot <h3>作者：李佳峻</h3></h1>
-            <em><mark id="mark">WIFI-Robot</mark></em>
-        </div>
-        <div class="dropdown open col-xs-12 col-sm-3" style="position: relative">
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownmenu">
-                <li><a tabindex="-1" href="#"> Arduino </a> </li>
-                <li><a tabindex="-1" href="#"> PCDuino </a> </li>
-                <li><a tabindex="-1" href="#"> 树莓派 </a> </li>
-                <li class="divider"></li>
-                <li><a tabindex="-1" href="#"> Linux单板机 </a> </li>
-            </ul>
-
+            <h1 id="center">Welcome to WIFI-Robot</h1><h2>作者：李涛&李佳峻</h2>
+            <em><mark>WIFI-Robot</mark></em>
         </div>
     </div>
     <div class="row">
@@ -76,7 +74,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <h3>WIFI-Robot <h5>这是一款基于<em>Arduino</em>的<em>WiFi</em>视频传输小车</h5></h3>
+            <h3>WIFI-Robot <h4>这是一款基于<em>Arduino</em>的<em>WiFi</em>视频传输小车</h4></h3>
         </div>
     </div>
     <div class="row">
@@ -187,13 +185,17 @@
             平均分：<meter value="4.9" max="5"></meter>
         </div>
     </div>
-    <hr />
-    <div class="row">
+</div>
+    <div class="progress progress-striped active">
+        <div class="progress-bar" style="width:100%"></div>
+    </div>
+<div class="container"><div class="row">
         <div class="col-xs-12 col-sm-12">
-            <img src = "pic/jinggao.jpg" alt="jinggao" height="30" /><B><mark>警告！闲人请勿继续往下看！！！</mark><a href="#">点击返回</a></B><hr>
+            <img src = "pic/jinggao.jpg" alt="jinggao" height="30" /><B>警告：<mark style="background-color:yellow">闲人请勿继续往下看！！！</mark><a href="#">点击返回</a></B>
         </div>
     </div>
     </div>
+<hr/>
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <form action="http://litaojin.github.io/li.html"method="get">
