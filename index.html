@@ -14,9 +14,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
     <style type="text/css">
-        :root{
-            background-color:#ffffff;
-        }
         body {
             font-family: "方正舒体";
             font-size:20px;
@@ -40,11 +37,27 @@
            content:url("pic/logo.png");
         }
         h1:first-letter{
-            font-family: "AR DELANEY";
+            font-family: "AR BERKLEY";
             font-size:50px;
         }
         #mark{
             font-family: "方正舒体";
+        }
+        h1:first-child{
+            font-family:"华文隶书";
+        }
+        h2:nth-child(2){
+            font-family:"华文新魏";
+            background-color:lightblue;
+        }
+        tr:hover{
+            background-color:#f5f5f5;
+            color:mediumblue;
+            font-family:"华文隶书"
+        }
+        tr{
+            padding:5px;
+            border:2px solid #aaa;
         }
     </style>
 </head>
@@ -90,7 +103,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-6">
-            <table class="table table-striped table-condensed table-hover" style="width:100%" border="1">
+            <table class="table" style="width:100% " border="1">
                 <caption><b>小车参数</b></caption>
                 <tr>
                     <th>名称</th>
@@ -99,31 +112,27 @@
                 <tr>
                     <td>小车速度：</td><td><meter value="80" max="100"></meter></td>
                 </tr>
-                <tr class="alt">
                     <td>  摄像头高清度：</td><td> <meter value="95" max="100"></meter></td>
                 </tr>
                 <tr>
                     <td> 超声波测距精度：</td><td> <meter value="80" max="100"></meter></td>
                 </tr>
-                <tr class="alt">
                     <td>  超声波测距距离：</td><td>  <meter value="95" max="100"></meter></td>
                 </tr>
                 <tr>
                     <td>  红外测距精度：</td><td> <meter value="70" max="100"></meter></td>
                 </tr>
-                <tr class="alt">
                     <td>  红外测距距离：</td><td>  <meter value="17" max="100"></meter></td>
                 </tr>
             </table>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <table class="table table-striped table-condensed table-hover" style="width:100%" border="1">
+            <table class="table" style="width:100%" border="1">
                 <caption><b>零件清单</b></caption>
                 <tr>
                     <th>数量</th>
                     <th>零件</th>
                 </tr>
-                <tr class="alt">
                     <td> 4</td>
                     <td>轮子</td>
                 </tr>
@@ -131,11 +140,9 @@
                     <td> 4</td>
                     <td> <em>TT</em>马达</td>
                 </tr>
-                <tr class="alt">
                     <td> 2</td>
                     <td>有机玻璃板</td>
                 </tr>
-                <tr class="alt">
                     <td> 1</td>
                     <td> <em>wifi</em>路由模块</td>
                 </tr>
@@ -143,7 +150,6 @@
                     <td> 1</td>
                     <td> 2自由度云台</td>
                 </tr>
-                <tr class="alt">
                     <td> 1</td>
                     <td> 高清摄像头</td>
                 </tr>
@@ -151,7 +157,6 @@
                     <td> 1</td>
                     <td> 无源蜂鸣器</td>
                 </tr>
-                <tr class="alt">
                     <td> 2</td>
                     <td><em> LED</em>发光模块</td>
                 </tr>
@@ -159,7 +164,6 @@
                     <td> 1</td>
                     <td> 超声波传感器</td>
                 </tr>
-                <tr class="alt">
                     <td> 1</td>
                     <td> 红外测距传感器</td>
                 </tr>
@@ -167,11 +171,9 @@
                     <td> 1</td>
                     <td> 光强度检测传感器</td>
                 </tr>
-                <tr class="alt">
                     <td> 1</td>
                     <td> <em>arduino UNO </em>控制主板</td>
                 </tr>
-                <tr class="alt">
                     <td> 1</td>
                     <td><em>arduino PM R3 </em>扩展板</td>
                 </tr>
