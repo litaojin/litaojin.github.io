@@ -23,6 +23,9 @@
             color:black;
             font-size:30px;
         }
+        #B:before{
+            content:url("pic/jinggao.jpg");
+        }
         mark{
             background: #ffff00;
             color:black;
@@ -192,7 +195,7 @@
         <hr/>
 <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <img src = "pic/jinggao.jpg" alt="jinggao" height="30" /><B>警告：<mark id="mark">闲人请勿继续往下看！！！</mark><a href="#">点击返回</a></B>
+            <B id="B">警告：<mark id="mark">闲人请勿继续往下看！！！</mark><a href="#">点击返回</a></B>
         </div>
     </div>
     </div>
@@ -201,7 +204,7 @@
     </div>
     <div style="background-color:#fff" class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-12 col-sm-12">
             <form action="http://litaojin.github.io/li.html"method="get">
                 <form action="add">
                     账号：<input id="writeemail" name="name" type="text" list="email" placeholder="请输入账号" required pattern="li.jiajun0322@gmail.com|litaojin@gmail.com" />
@@ -211,10 +214,10 @@
                     </datalist>
                     （双击可以显示注册过的账号，点击可以快速输入）
         </div>
-        <div class="col-xs-12 col-sm-3">
+        <div class="col-xs-12 col-sm-12">
             密码：<input id="password" name="password" type="password" placeholder="请填写密码" />
         </div>
-        <div class="col-xs-12 col-sm-3">
+        <div class="col-xs-12 col-sm-12">
             登陆方式：
             <select id="skills" name="skills">
                 <option value="email" >email</option>
@@ -244,6 +247,7 @@
                     };
                 </script>
             </select>
+            <p></p>
             <input type="submit" value="确定" onclick="check()"><button  type="reset" value="重填">重填</button>
             </form>
         </div>
