@@ -24,7 +24,7 @@
             color:black;
             font-size:30px;
         }
-        #B:before{
+        #empty{
             content:url("pic/jinggao.jpg");
         }
         mark{
@@ -73,6 +73,16 @@
             background-color:white;
             color:#31b0d5;
         }
+        .stereoscopic{
+            width:160px;
+            text-align:center;
+            border-right: #222 3px solid;
+            border-top: #ddd 3px solid;
+            border-left: #ddd 3px solid;
+            border-bottom: #222 3px solid;
+            background-color: #ffff00;
+        }
+
     </style>
 </head>
 <body>
@@ -229,7 +239,8 @@
         <hr/>
 <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <B id="B">警告：<mark id="mark">闲人请勿继续往下看！！！</mark><a href="#">点击返回</a></B>
+            <B><div class="col-xs-12 col-sm-1" id="empty"></div><div class="col-xs-12 col-sm-2 stereoscopic">警告：</div>
+                <div class="col-xs-12 col-sm-6"><mark id="mark">闲人请勿继续往下看！！！</mark><a href="#">点击返回</a></div></B>
         </div>
     </div>
     </div>
