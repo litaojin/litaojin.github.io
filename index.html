@@ -90,7 +90,25 @@
     <div class="row">
         <div class="col-xs-12 col-sm-9">
             <h1 id="center">Welcome to WIFI-Robot  </h1><h2>作者：李涛&李佳峻</h2>
-            <h4 ng-controller="IController">您的访问时间是：{{t.text}}</h4>
+            <h4 ng-controller="IController">您访问的时间是：{{t.text}}</h4>
+            <h4>您已经访问此网站:   <span id=h>00分00秒</span></h4>
+            <script>
+                a=b=0
+                x(1);
+                function x(n){
+                    a++;
+                    if(a==0){a='00'}
+                    else if(a<10){a='0'+a}
+                    if(a==60){a=0;b++}
+                    if(b%10==0){if(a==00)show_confirm()}
+                    h.innerText=b+'分'+a+'秒';
+                    setTimeout(arguments.callee, 1000);
+                }
+                function show_confirm()
+                {
+                    confirm("您已经看此网页"+b+"分钟了，请注意休息！");
+                }
+            </script>
             您可以在这里选择您喜欢的背景颜色：<input name="color" id="color" type="color" value="#ffffff"/>
             <script type="text/javascript">
                 var color = document.getElementById("color");

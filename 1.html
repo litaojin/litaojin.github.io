@@ -6,5 +6,28 @@
 </head>
 <body ng-app="iApp">
 <div ng-controller="IController"><p>{{t.text}}</p></div>
+<div style='font-size:20'>
+    <button id=b0 onclick='x(1)'>start</button>
+    <button id=b1 onclick='x(0)' disabled>pause</button>
+    <button id=b2 onclick='x(2)' disabled>clear</button>
+    <p id=h>00:00:00</p>
+</div>
+<script>
+    a=b=c=0
+    function x(n){
+        if(n){
+            if(n==1){
+                b2.disabled=b0.disabled=true
+                b1.disabled=false
+                N=setInterval(function(){a++
+                    if(a==60){a=0;b++}
+                    if(b==60){b=0;c++}
+                    h.innerText=c+':'+b+':'+a
+                },1)
+            }else{b2.disabled=true;a=b=c=0;h.innerText='00:00:00'}
+        }
+        else{b0.disabled=b2.disabled=false;b1.disabled=true;clearInterval(N)}
+    }
+</script>
 </body>
 </html>
