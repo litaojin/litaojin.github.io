@@ -82,6 +82,13 @@
     </style>
 </head>
 <body ng-app="iApp">
+<script>
+    var s;
+    show(1);
+    function show(w) {
+        s=confirm("您需要每隔十分钟提醒1次吗？点击“确定”是，点击“取消”否");
+    }
+</script>
     <div class="row">
         <div class="progress progress-striped active">
         <div class="progress-bar" style="width:100%"></div>
@@ -100,7 +107,7 @@
                     if(a==0){a='00'}
                     else if(a<10){a='0'+a}
                     if(a==60){a=0;b++}
-                    if(b%10==0){if(a==00)show_alert()}
+                    if(b%10==0){if(a==00 && s==true)show_alert()}
                     h.innerText=b+'分'+a+'秒';
                     setTimeout(arguments.callee, 1000);
                 }
@@ -230,23 +237,30 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <h3>很高科技吧！</h3><button onclick="start()">友情智商测试</button><hr />
+            <h3>很高科技吧！</h3>
+            <button onclick="start()">友情智商测试</button>
+            <hr />
         </div>
         <script>
-            var l=m=n=o=p=q=0;
+            var l=m=z=o=p=q=y=0;
             function start(){
                 l=Math.ceil(Math.random()*100);
                 m=Math.ceil(Math.random()*100);
-                n+=1;
-                if(n==1){n='+';o=l+m;}
-                else if(n==2){n='-';o=l-m;}
-                else if(n==3){n='*';o=l*m;}
-                else {n='/';o=l/m;}
-                p=prompt(l+n+m,"请输入答案");
+                z++;
+                if(z==1){y='+';o=l+m;}
+                else if(z==2){y='-';o=l-m;}
+                else if(z==3){y='*';l=Math.ceil(l/10);o=l*m;}
+                else if(z==4){y='/';l=l*m;o=l/m;}
+                else if(z==5){y='*';o=l*m;}
+                else if(z==6){y='*';l=l*l;m=m*m;o=l*m}
+                else if(z==7){y='*';l=l*l;m=m*m;o=l*m}
+                else {y='/';o=l/m;}
+                p=prompt(l+y+m,"请输入答案");
                 if(p!=null && p==o){q=confirm("恭喜你答对了,准备好进入下一关了吗？");}
-                else if(p!=null){alert("很遗憾答错了");q=false}
+                else if(p!=null){alert("很遗憾答错了,正确答案是"+o+"。您的智商得分是"+z*20);q=false}
                 else{q=false;}
                 if(q==true){setTimeout(arguments.callee, 1);}
+                else {z=0;}
             }
         </script>
         <div class="col-xs-12 col-sm-12">
