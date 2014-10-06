@@ -230,8 +230,25 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <h3>很高科技吧！</h3><hr>
+            <h3>很高科技吧！</h3><button onclick="start()">友情智商测试</button><hr />
         </div>
+        <script>
+            var l=m=n=o=p=q=0;
+            function start(){
+                l=Math.ceil(Math.random()*100);
+                m=Math.ceil(Math.random()*100);
+                n+=1;
+                if(n==1){n='+';o=l+m;}
+                else if(n==2){n='-';o=l-m;}
+                else if(n==3){n='*';o=l*m;}
+                else {n='/';o=l/m;}
+                p=prompt(l+n+m,"请输入答案");
+                if(p!=null && p==o){q=confirm("恭喜你答对了,准备好进入下一关了吗？");}
+                else if(p!=null){alert("很遗憾答错了");q=false}
+                else{q=false;}
+                if(q==true){setTimeout(arguments.callee, 1);}
+            }
+        </script>
         <div class="col-xs-12 col-sm-12">
             <table class="table" style="border-collapes:collapes">
                 <tr contentEditable="true">
