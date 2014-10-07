@@ -83,9 +83,8 @@
 </head>
 <body ng-app="iApp">
 <script>
-    var s;
-    show(1);
-    function show(w) {
+    var s=false;
+    function show() {
         s=confirm("您需要每隔十分钟提醒1次吗？点击“确定”是，点击“取消”否");
     }
 </script>
@@ -97,6 +96,21 @@
     <div class="row">
         <div class="col-xs-12 col-sm-9">
             <h1 id="center">Welcome to WIFI-Robot  </h1><h2>作者：李涛&李佳峻</h2>
+            <h4>您访问的次数是：<span id="w">0次</span></h4>
+            <script>
+                once(1);
+                function once(h){
+                    if (localStorage.th)
+                    {
+                        localStorage.th=Number(localStorage.th) +1;
+                    }
+                    else
+                    {
+                        localStorage.th=1;
+                    }
+                    w.innerText=localStorage.th+"次";
+                }
+            </script>
             <h4 ng-controller="IController">您访问的时间是：{{t.text}}</h4>
             <h4>您已经访问此网站:   <span id=h>00分00秒</span></h4>
             <script>
@@ -238,9 +252,9 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12">
             <h3>很高科技吧！</h3>
-            <button onclick="start()">友情智商测试</button>
             <hr />
-        </div>
+            <h3>WIFI在线小应用</h3>
+            <button onclick="start()">友情智商测试仪</button>
         <script>
             var l=m=z=o=p=q=y=0;
             function start(){
@@ -263,6 +277,9 @@
                 else {z=0;}
             }
         </script>
+        <button onclick="show()">提醒小工具</button>
+        </div>
+        <hr />
         <div class="col-xs-12 col-sm-12">
             <table class="table" style="border-collapes:collapes">
                 <tr contentEditable="true">
