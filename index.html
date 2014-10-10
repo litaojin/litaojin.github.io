@@ -4,7 +4,20 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+function detectBrowser()
+{
+var browser=navigator.appName
+var b_version=navigator.appVersion
+var version=parseFloat(b_version)
 
+if (browser=="Google Chrome")
+  {alert("你的浏览器可以正常访问网页^_^")}
+else
+  {alert("请更换成Google Chrome来获得更好的浏览效果=_=")}
+  }
+</script>
+<body onload="detectBrowser()">
     <title>WIFI-ROBOT</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="img/x-icon"/>
@@ -270,7 +283,7 @@
                 else if(z==6){y='*';l=l*l;m=m*m;o=l*m}
                 else if(z==7){y='*';l=l*l;m=m*m;o=l*m}
                 else {y='/';o=l/m;}
-                p=prompt(l+y+m,"请输入答案");
+                p=prompt("请输入答案："+l+y+m,"");
                 if(p!=null && p==o){q=confirm("恭喜你答对了,准备好进入下一关了吗？");}
                 else if(p!=null){alert("很遗憾答错了,正确答案是"+o+"。您的智商得分是"+z*20);q=false}
                 else{q=false;}
