@@ -95,7 +95,7 @@
     <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-9">
-            <h1 id="center">Welcome to WIFI-Robot  </h1><h2>作者：李涛&李佳峻</h2>
+            <h1 id="center">Welcome to WIFI-Robot  </h1><h2>作者：李涛&李佳峻&陈濯</h2>
             <h4>您访问的次数是：<span id="w">0次</span></h4>
             <script>
                 once(1);
@@ -112,7 +112,7 @@
                 }
             </script>
             <h4 ng-controller="IController">您访问的时间是：{{t.text}}</h4>
-            <h4>您已经访问此网站:   <span id=h>00分00秒</span></h4>
+            <h4>您已经访问此网站:   <span id=h>00小时00分00秒</span></h4>
             <script>
                 a=b=0
                 x(1);
@@ -121,8 +121,9 @@
                     if(a==0){a='00'}
                     else if(a<10){a='0'+a}
                     if(a==60){a=0;b++}
+                    if(b==60){b=0;c++}
                     if(b%10==0){if(a==00 && s==true)show_alert()}
-                    h.innerText=b+'分'+a+'秒';
+                    h.innerText=c+'小时'+b+'分'+a+'秒';
                     setTimeout(arguments.callee, 1000);
                 }
                 function show_alert()
