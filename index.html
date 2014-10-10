@@ -4,7 +4,20 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+function detectBrowser()
+{
+var browser=navigator.appName
+var b_version=navigator.appVersion
+var version=parseFloat(b_version)
 
+if (browser=="Google Chrome")
+  {alert("你的浏览器可以正常访问网页^_^")}
+else
+  {alert("请更换成Google Chrome来获得更好的浏览效果=_=")}
+  }
+</script>
+<body onload="detectBrowser()">
     <title>WIFI-ROBOT</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="img/x-icon"/>
@@ -95,7 +108,7 @@
     <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-9">
-            <h1 id="center">Welcome to WIFI-Robot  </h1><h2>作者：李涛&李佳峻</h2>
+            <h1 id="center">Welcome to WIFI-Robot  </h1><h2>作者：李涛&李佳峻&陈濯</h2>
             <h4>您访问的次数是：<span id="w">0次</span></h4>
             <script>
                 once(1);
@@ -112,7 +125,7 @@
                 }
             </script>
             <h4 ng-controller="IController">您访问的时间是：{{t.text}}</h4>
-            <h4>您已经访问此网站:   <span id=h>00分00秒</span></h4>
+            <h4>您已经访问此网站:   <span id=h>00小时00分00秒</span></h4>
             <script>
                 a=b=0
                 x(1);
@@ -121,8 +134,9 @@
                     if(a==0){a='00'}
                     else if(a<10){a='0'+a}
                     if(a==60){a=0;b++}
+                    if(b==60){b=0;c++}
                     if(b%10==0){if(a==00 && s==true)show_alert()}
-                    h.innerText=b+'分'+a+'秒';
+                    h.innerText=c+'小时'+b+'分'+a+'秒';
                     setTimeout(arguments.callee, 1000);
                 }
                 function show_alert()
@@ -269,7 +283,7 @@
                 else if(z==6){y='*';l=l*l;m=m*m;o=l*m}
                 else if(z==7){y='*';l=l*l;m=m*m;o=l*m}
                 else {y='/';o=l/m;}
-                p=prompt(l+y+m,"请输入答案");
+                p=prompt("请输入答案："+l+y+m,"");
                 if(p!=null && p==o){q=confirm("恭喜你答对了,准备好进入下一关了吗？");}
                 else if(p!=null){alert("很遗憾答错了,正确答案是"+o+"。您的智商得分是"+z*20);q=false}
                 else{q=false;}
